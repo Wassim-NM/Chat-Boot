@@ -50,7 +50,7 @@ body {
     flex: 1;
     padding: 0.625rem; /* 10px to rem */
     overflow-y: auto;
-    background: url(https://img.freepik.com/free-vector/watercolour-light-blue-background_78370-3537.jpg) center/cover no-repeat;
+    background: url(Assets/bg-photo-default.avif) center/cover no-repeat;
     display: flex;
     flex-direction: column;
     gap: 0.625rem; /* 10px to rem */
@@ -85,6 +85,10 @@ body {
     background-color: var(--bg-color); /* Use variable */
     color: var(--header-color);
     align-self: flex-start; /* Align to the left */
+}
+
+.bg-color-picker {
+    
 }
 
 /* Input Field */
