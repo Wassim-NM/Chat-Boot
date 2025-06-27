@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Chatbot</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> <!-- Adding Font Awesome -->
+    <link rel="stylesheet" href="MindSpark.css">
+</head>
+<body>
+
+    <div class="chatbot-container">
+        <!-- Chatbot Header -->
+        <div class="chatbot-header">
+            <div class="menu-options left">
+                <button class="options-item" onclick="toggleSection('profile-section')">
+                    <i class="fas fa-user"></i> Profile
+                </button>
+                <button class="options-item" onclick="toggleSection('themes-section')">
+                    <i class="fas fa-palette"></i> Themes
+                </button>
+            </div>    
+            <h2 class="chatbot-title">MindSpark</h2>
+            <div class= "menu-options right">
+                <button class="options-item" onclick="signOut()">Sign Out</button>
+            </div>
+        </div>
+
+
+        <!-- Chatbot Messages -->
+        <div class="chatbot-messages" id="chatbot-messages">
+            <!-- Messages will appear here dynamically -->
+        </div>
+
+        <!-- Chatbot Input -->
+        <div class="chatbot-input">
+            <input type="text" id="user-input" placeholder="Type a message...">
+            <button id="send-btn">Send</button>
+        </div>
+    </div>
+
+    
+
+
+    <!-- Hidden sections for profile and themes -->
+    <div class="hidden-section" id="profile-section" style="display: none;">
+        <div>
+            <button class="close-btn" onclick="toggleSection('profile-section')">X</button>
+        </div>
+        <!-- Display user information here -->
+</head>
+<body>
+
+    <div class="chatbot-container">
+        <!-- Chatbot Header -->
+        <div class="chatbot-header">
+            <div class="menu-options left">
+                <button class="options-item" onclick="toggleSection('profile-section')">
+                    <i class="fas fa-user"></i> Profile
+                </button>
+                <button class="options-item" onclick="toggleSection('themes-section')">
+                    <i class="fas fa-palette"></i> Themes
+                </button>
+            </div>    
+            <h2 class="chatbot-title">MindSpark</h2>
+            <div class= "menu-options right">
+                <button class="options-item" onclick="signOut()">Sign Out</button>
+            </div>
+        </div>
+
+
+        <!-- Chatbot Messages -->
+        <div class="chatbot-messages" id="chatbot-messages">
+            <!-- Messages will appear here dynamically -->
+        </div>
+
+        <!-- Chatbot Input -->
+        <div class="chatbot-input">
+            <input type="text" id="user-input" placeholder="Type a message...">
+            <button id="send-btn">Send</button>
+        </div>
+    </div>
+
+    
+
+
+    <!-- Hidden sections for profile and themes -->
+    <div class="hidden-section" id="profile-section" style="display: none;">
+        <div>
+            <button class="close-btn" onclick="toggleSection('profile-section')">X</button>
+        </div>
+        <!-- Display user information here -->
+        <div class="profile-content">
+            <h3>Profile</h3>
+            <div class="profile-details">
+                <form action="/submit" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <br>
+                    <label for="number">Phone number:</label>
+                    <input type="number" id="number" name="number" required>
+                    <br>
+                    <p><strong>Reg. Date:</strong> January 1, 2023</p>
+                    <input type="submit" class="edit-profile-btn" value="Edit profile" onclick="editProfile()">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="hidden-section" id="themes-section" style="display: none;">
+        <div>
+            <button class="close-btn" onclick="toggleSection('themes-section')">X</button>
+        </div>
+        <div class="themes-content">
+            <h3>Customize Colors</h3>
+            <div class="color-picker-row">
+                <div class="color-picker-container">
+                    <label for="bg-color-picker">Main Color:</label>
+                    <input type="color" id="bg-color-picker">
+                </div>
+                <div class="color-picker-container">
+                    <label for="header-color-picker">Accent Color:</label>
+                    <input type="color" id="header-color-picker">
+                </div>
+            </div>
+
+            <div class="button-row">
+                <button class="save-btn oval-btn" onclick="save()">Save Changes</button>
+                <button class="default-btn oval-btn" onclick="resetToDefault()">Default Theme</button>
+            </div>
+
+            <h3>Adjust Text Size</h3>
+            <div class="text-size-container">
+                <div class="text-size-sample oval-btn" onclick="applyTextSize('text-small')">Small</div>
+                <div class="text-size-sample oval-btn" onclick="applyTextSize('text-medium')">Medium</div>
+                <div class="text-size-sample oval-btn" onclick="applyTextSize('text-large')">Large</div>
+            </div>
+            
+            
+        </div>
+    </div>
+
+    <script src="MindSpark.js"></script>
+</body>
+</html>information here -->
+        <div class="profile-content">
+            <h3>Profile</h3>
+            <div class="profile-details">
+                <form action="/submit" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <br>
+                    <label for="number">Phone number:</label>
+                    <input type="number" id="number" name="number" required>
+                    <br>
+                    <p><strong>Reg. Date:</strong> January 1, 2023</p>
+                    <input type="submit" class="edit-profile-btn" value="Edit profile" onclick="editProfile()">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="hidden-section" id="themes-section" style="display: none;">
+        <div>
+            <button class="close-btn" onclick="toggleSection('themes-section')">X</button>
+        </div>
+        <div class="themes-content">
+            <h3>Customize Colors</h3>
+            <div class="color-picker-row">
+                <div class="color-picker-container">
+                    <label for="bg-color-picker">Main Color:</label>
+                    <input type="color" id="bg-color-picker">
+                </div>
+                <div class="color-picker-container">
+                    <label for="header-color-picker">Accent Color:</label>
+                    <input type="color" id="header-color-picker">
+                </div>
+                <div class="bg-color-picker">
+                    <label for="bg-color-picker">Back Ground Color:</label>
+                    <ul class="bg-them-color">
+                        <li><input type="button" class="bg-color-picker" value="darckBlue" onclick="changeBackground()"></li>
+                        <li><input type="button" class="bg-color-picker" value="limeGreen" onclick="changeBackground()"></li>
+                        <li><input type="button" class="bg-color-picker" value="pink" onclick="changeBackground()"></li>
+                        <li><input type="button" class="bg-color-picker" value="orange" onclick="changeBackground()"></li>
+                        <li><input type="button" class="bg-color-picker" value="gray" onclick="changeBackground()"></li>
+                        <li><input type="button" class="bg-color-picker" value="purple" onclick="changeBackground()"></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="button-row">
+                <button class="save-btn oval-btn" onclick="save()">Save Changes</button>
+                <button class="default-btn oval-btn" onclick="resetToDefault()">Default Theme</button>
+            </div>
+
+            <h3>Adjust Text Size</h3>
+            <div class="text-size-container">
+                <div class="text-size-sample oval-btn" onclick="applyTextSize('text-small')">Small</div>
+                <div class="text-size-sample oval-btn" onclick="applyTextSize('text-medium')">Medium</div>
+                <div class="text-size-sample oval-btn" onclick="applyTextSize('text-large')">Large</div>
+            </div>
+            
+            
+        </div>
+    </div>
+
+    <script src="MindSpark.js"></script>
+</body>
+</html>
